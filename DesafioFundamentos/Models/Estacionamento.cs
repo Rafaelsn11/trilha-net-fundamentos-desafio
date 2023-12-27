@@ -16,7 +16,7 @@ namespace DesafioFundamentos.Models
         {
             // *IMPLEMENTADO*
             Console.WriteLine("Digite a placa do veículo para estacionar:");
-            string placaVeiculo = Console.ReadLine();
+            string placaVeiculo = Console.ReadLine().ToUpper();
             if (veiculos.Any(y => y.ToUpper() == placaVeiculo.ToUpper()))
             {
                 Console.WriteLine($"O veículo {placaVeiculo} já foi adicionado. Tente Novamente");
@@ -34,7 +34,7 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para remover:");
 
             // *IMPLEMENTADO*
-            string placa = Console.ReadLine();
+            string placa = Console.ReadLine().ToUpper();
 
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
